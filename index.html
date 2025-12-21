@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dhanashri Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+
+            /* Full page background */
+            background-image: url("bg.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+          
+        }
+
+        header {
+            padding: 40px;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+            color: slateblue;
+        }
+
+        .role {
+            font-size: 14px;
+            color: gray;
+        }
+
+        .profile {
+            float: right;
+        }
+
+        .profile img {
+            width: 360px;
+            height: 360px;
+            border: 2px solid slateblue;
+            border-radius: 8px;
+        }
+
+        .links a {
+            margin-right: 10px;
+            color: blue;
+            font-size: 14px;
+        }
+
+        .buttons {
+            margin: 30px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 15px;
+            background-color: slateblue;
+            color: white;
+            cursor: pointer;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: lavenderblush;
+            padding: 15px;
+        }
+
+        .skill {
+            background-color: lavender
+;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: lightgray;
+            padding: 10px;
+            margin-top: 500px;
+        }
+    </style>
+
+    <script>
+        function openSection(name) {
+            var sections = document.getElementsByTagName("section");
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";
+            }
+            document.getElementById(name).style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <div class="profile">
+        <img src="dp.jpeg" alt="Profile">
+    </div>
+
+    <h1>Dhanashri Uttam Pathade</h1>
+    <div class="role">
+        Diploma Student – Computer Engineering <br>
+        Web Development Intern
+    </div>
+
+    <p>
+        I am a third-year Diploma student at Government Polytechnic Pune,
+        learning web development and front-end technologies.
+    </p>
+
+    <div class="links">
+        <a href="https://github.com/">GitHub</a>
+        <a href="Dhanashri Pathade">LinkedIn</a>
+        <a href="https://mail.google.com/mail/u/0/#inbox">Email</a>
+    </div>
+</header>
+
+<div class="buttons">
+    <button onclick="openSection('about')">About</button>
+    <button onclick="openSection('skills')">Skills</button>
+    <button onclick="openSection('projects')">Projects</button>
+    <button onclick="openSection('education')">Education</button>
+    <button onclick="openSection('contact')">Contact</button>
+    <button onclick="openSection('extra')">Extra</button>
+</div>
+
+<section id="about">
+    <div class="box">
+        <h2>About Me</h2>
+        <p>
+            I am a third-year Diploma student in Computer Engineering at Government Polytechnic Pune.
+            I have a strong interest in web development and front-end technologies.
+            Currently, I am learning HTML, CSS, and JavaScript and applying them through
+            hands-on projects like my personal portfolio website.
+            I am eager to learn, improve my skills, and gain real-world experience through
+            internships and collaborative projects.
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="box">
+        <h2>Skills</h2>
+
+        <h3>Programming Languages</h3>
+        <div class="skill">C</div>
+        <div class="skill">C++</div>
+        <div class="skill">Java</div>
+        <div class="skill">Python</div>
+
+        <h3>Web Technologies</h3>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+
+        <h3>Database</h3>
+        <div class="skill">MySQL</div>
+
+        <h3>Tools & Platforms</h3>
+        <div class="skill">VS Code</div>
+        <div class="skill">GitHub</div>
+        <div class="skill">Turbo C++</div>
+        <div class="skill">Dev C++</div>
+
+        <h3>Interest Areas</h3>
+        <div class="skill">Data Science</div>
+        <div class="skill">Web Development</div>
+        <div class="skill">Cloud Computing</div>
+        <div class="skill">Cybersecurity</div>
+        <div class="skill">IoT & Robotics</div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="box">
+        <h2>Projects</h2>
+
+        <p><b>Amazon Portfolio Website</b></p>
+        <p>Designed a responsive portfolio-style website showcasing Amazon products using HTML and CSS.</p>
+
+        <p><b>Login Page</b></p>
+        <p>Created a secure login page with form validation using HTML, CSS, and JavaScript.</p>
+
+        <p><b>Student Management System</b></p>
+        <p>Developed a C++ application to automate student record management.</p>
+
+        <p><b>Library Management System</b></p>
+        <p>Built a Python-based system to manage book issue and return operations.</p>
+
+        <p><b>Smart Parking System (IoT)</b></p>
+        <p>Designed an IoT-based smart parking solution to manage parking efficiently.</p>
+    </div>
+</section>
+
+<section id="education">
+    <div class="box">
+        <h2>Education</h2>
+
+        <p><b>Diploma in Computer Engineering</b></p>
+        <p>Government Polytechnic Pune</p>
+        <p>2023 – 2026 (Pursuing)</p>
+
+        <p><b>HSC</b></p>
+        <p>Chatrapati Rajashri Shahu Jr. Science College, Latur</p>
+        <p>67.83% (2023)</p>
+
+        <p><b>SSC</b></p>
+        <p>Phoenix International English School, Ashti</p>
+        <p>100% (2021)</p>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="box">
+        <h2>Contact</h2>
+        <p>📍 Pune, Maharashtra – 411016</p>
+        <p>📞 +91 9143982121</p>
+        <p>✉️ dhanashripathde999@gmail.com</p>
+        <p>💻 GitHub: github.com/dhanashrip21</p>
+        <p>🔗 LinkedIn: linkedin.com/in/dhanashri-pathade</p>
+    </div>
+</section>
+
+<section id="extra">
+    <div class="box">
+        <h2>Achievements & Interests</h2>
+
+        <p><b>Certifications & Achievements</b></p>
+        <p>Participant – MINDSPARK 2023 (COEP)</p>
+        <p>State-level Online Quiz Competitions</p>
+        <p>College-level Coding Competitions</p>
+        <p>Interzonal Volleyball Competition</p>
+
+        <p><b>Languages</b>: English, Hindi, Marathi</p>
+        <p><b>Soft Skills</b>: Problem Solving, Teamwork, Quick Learner</p>
+        <p><b>Hobbies</b>: Coding challenges, Reading, Volleyball, Music, Art & Painting</p>
+    </div>
+</section>
+
+<footer>
+    @ Dhanashri Uttam Pathade 7979
+</footer>
+
+</body>
+</html>
