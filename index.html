@@ -7,7 +7,6 @@
             margin: 0;
             font-family: Arial;
 
-            /* Full page background */
             background-image: url("bg.jpg");
             background-size: cover;
             background-position: center;
@@ -17,11 +16,13 @@
 
         header {
             padding: 40px;
+            
         }
 
         h1 {
             margin-bottom: 5px;
             color: slateblue;
+           
         }
 
         .role {
@@ -74,6 +75,28 @@
             padding: 8px;
             margin-top: 5px;
         }
+       
+ .card-container {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.card {
+    flex: 1;
+    min-width: 220px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    color: slateblue;
+    margin-top: 0;
+}
+
 
         footer {
             text-align: center;
@@ -125,21 +148,43 @@
     <button onclick="openSection('projects')">Projects</button>
     <button onclick="openSection('education')">Education</button>
     <button onclick="openSection('contact')">Contact</button>
-    <button onclick="openSection('extra')">Extra</button>
+    <button onclick="openSection('achievements')">Achievements</button>
 </div>
 
 <section id="about">
     <div class="box">
         <h2>About Me</h2>
         <p>
-            I am a third-year Diploma student in Computer Engineering at Government Polytechnic Pune.
-            I have a strong interest in web development and front-end technologies.
+            I am a third-year Diploma student in Computer Engineering at Government Polytechnic Pune.<br>
+            I have a strong interest in web development and front-end technologies.<br>
             Currently, I am learning HTML, CSS, and JavaScript and applying them through
-            hands-on projects like my personal portfolio website.
+            hands-on projects like my personal portfolio website.<br>
             I am eager to learn, improve my skills, and gain real-world experience through
             internships and collaborative projects.
         </p>
     </div>
+    <div class="card-container">
+
+        <div class="card">
+            <h3>🎓 Education</h3>
+            <p>Diploma in Computer Engineering<br>
+            Government Polytechnic Pune</p>
+        </div>
+
+        <div class="card">
+            <h3>💻 Experience</h3>
+            <p>Web Development Intern<br>
+            Hands-on projects in HTML, CSS & JavaScript</p>
+        </div>
+
+        <div class="card">
+            <h3>🎯 Career Goal</h3>
+            <p>To become a skilled Full-Stack Developer
+            and work on impactful real-world projects.</p>
+        </div>
+
+    </div>
+
 </section>
 
 <section id="skills">
@@ -225,7 +270,7 @@
     </div>
 </section>
 
-<section id="extra">
+<section id="achievements">
     <div class="box">
         <h2>Achievements & Interests</h2>
 
