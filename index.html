@@ -3,6 +3,7 @@
 <head>
     <title>Dhanashri Portfolio</title>
     <style>
+
         body {
             margin: 0;
             font-family: Arial;
@@ -12,6 +13,7 @@
             background-position: center;
             background-attachment: fixed;
           
+            
         }
 
         header {
@@ -70,8 +72,7 @@
         }
 
         .skill {
-            background-color: lavender
-;
+            background-color: lavender;
             padding: 8px;
             margin-top: 5px;
         }
@@ -83,18 +84,27 @@
     margin-top: 25px;
 }
 
+
 .card {
     flex: 1;
     min-width: 220px;
     background-color: white;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+   
 }
 
 .card h3 {
     color: slateblue;
     margin-top: 0;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 
@@ -106,15 +116,45 @@
         }
     </style>
 
-    <script>
-        function openSection(name) {
-            var sections = document.getElementsByTagName("section");
-            for (var i = 0; i < sections.length; i++) {
-                sections[i].style.display = "none";
-            }
-            document.getElementById(name).style.display = "block";
+   <script>
+    
+function openSection(name) {
+    var sections = document.getElementsByTagName("section");
+
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = "none";
+    }
+
+    var edu = document.getElementById("eduDetails");
+    if (edu != null) {
+        edu.style.display = "none";
+    }
+
+    document.getElementById(name).style.display = "block";
+}
+
+function showDetails() {
+    var edu = document.getElementById("eduDetails");
+    var cards = document.getElementsByClassName("card");
+
+    if (edu.style.display == "none") {
+        edu.style.display = "block";
+
+        for (var i = 1; i < cards.length; i++) {
+            cards[i].style.display = "none";
         }
-    </script>
+    } else {
+        edu.style.display = "none";
+
+        for (var i = 1; i < cards.length; i++) {
+            cards[i].style.display = "block";
+        }
+    }
+}
+</script>
+
+
+
 </head>
 
 <body>
@@ -165,11 +205,28 @@
     </div>
     <div class="card-container">
 
-        <div class="card">
+        <div class="card" onclick="showDetails()" style="cursor:pointer">
             <h3>🎓 Education</h3>
             <p>Diploma in Computer Engineering<br>
             Government Polytechnic Pune</p>
         </div>
+
+
+        <div id="eduDetails" class="box" style="display:none; margin-top:20px;">
+    <h3>My College – Government Polytechnic Pune</h3>
+
+    <p>
+        I am studying Diploma in Computer Engineering at Government Polytechnic Pune.
+        The college provides good technical exposure, labs and events.
+    </p>
+
+    <img src="college1.jpg" width="350" height="350">
+    <img src="college2.jpg" width="350" height="350">
+    <img src="college3.jpg" width="350" height="350">
+
+   
+</div>
+
 
         <div class="card">
             <h3>💻 Experience</h3>
@@ -285,6 +342,8 @@
         <p><b>Hobbies</b>: Coding challenges, Reading, Volleyball, Music, Art & Painting</p>
     </div>
 </section>
+
+
 
 <footer>
     @ Dhanashri Uttam Pathade 7979
